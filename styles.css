@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #2F4F4F;
+    height: 100vh;
+}
+
+nav {
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+nav .logo {
+    position: absolute;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    height: 100px; /* Adjust height as needed */
+    margin-right: 10px;
+}
+
+nav .search-bar {
+    width: 400px;
+    margin-top: 0;
+    height: auto;
+}
+
+nav .search-bar input {
+    width: 100%;
+    padding: 3%;
+    font-size: 16px;
+    border-color: #50C878;
+    border-width: 2px;
+    border-radius: 10px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D3D3D3;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+    z-index: 1;
+}
+
+spline-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #D3D3D3;
+    padding: 20px;
+    justify-content: flex-start; 
+}
+
+.card {
+    background-color: #1c1c1c;
+    border: 2px solid #50C878;
+    border-radius: 10px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    text-align: left; 
+}
+.card:hover {
+    transform: translateY(-10px); /* Raises the card slightly on hover */
+}
+.second-header{
+    font-size: 30px;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+.creator {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    gap: 10px; /* Space between the image and the text */
+}
+
+.creator-profile {
+    width: 0px; /* Adjust size as needed */
+    height: 20px; /* Ensure the image is square */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+}
+
+
+
+.card .price {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #50C878;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.card .social {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card .social a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.titleone{
+    background-color: white;
+}
+
+.footer {
+    background-color: black;
+    color: #fefefe;
+    
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .footer .heading {
+    color: #fefefe;
+    max-width: 1010px;
+    width: 90%;
+    text-transform: uppercase;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  .footer .content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.5rem;
+  }
+  
+  .footer .content p {
+    margin-bottom: 1.3rem;
+  }
+  
+  .footer .content a {
+    text-decoration: none;
+    color: #fefefe;
+  }
+  
+  .footer .content a:hover {
+    border-bottom: 1px solid #971717;
+  }
+  
+  .footer .content h4 {
+    margin-bottom: 1.3rem;
+    font-size: 19px;
+  }
+  
+  footer {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  footer hr {
+    margin: 2rem 0;
+  }
+  
+  @media (max-width: 767px) {
+    .footer .content {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+  
+    .footer {
+      position: unset;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .footer .content,
+    .footer {
+      font-size: 14px;
+    }
+  }
+  
+  @media (orientation: landscape) and (max-height: 500px) {
+    .footer {
+      position: unset;
+    }
+  }
+
+
+  header {
+	display: flex;
+	overflow: hidden;
+	height: 50vw;
+	background: #111;
+}
+
+header:hover img {
+	opacity: 0.5;
+}
+
+header img {
+	max-width: 100%;
+	vertical-align: middle;
+	border: 1px solid black;
+	box-sizing: border-box;
+	transition: opacity .2s;
+}
+
+header img:hover {
+	opacity: 1;
+}
+
+header .column {
+	animation: var(--animation, none) 16s infinite linear;
+}
+
+header .column:hover {
+	animation-play-state: paused;
+}
+
+header .column:nth-of-type(odd) {
+	align-self: flex-end;
+	--direction: 50%;
+}
+
+@keyframes slide {
+	to { transform: translateY(var(--direction, -50%)) }
+}
