@@ -267,3 +267,41 @@ header .column:nth-of-type(odd) {
 @keyframes slide {
 	to { transform: translateY(var(--direction, -50%)) }
 }
+
+.artists-section {
+    background-color: #D3D3D3; /* Light gray background */
+    padding: 20px;
+    position: relative; /* Positioning for placing at the lower part */
+}
+
+.artists-section h2 {
+    text-align: left; /* Align the header to the left */
+    margin-bottom: 20px;
+    color: #000; /* Text color */
+}
+
+.artists-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center the profiles */
+}
+
+.artist-profile {
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    text-align: center;
+    width: 150px; /* Width of each profile */
+}
+
+.artist-profile img {
+    width: 100%; /* Full width of the profile */
+    height: 150px; /* Fixed height for uniformity */
+    border-radius: 50%; /* Makes the image circular */
+}
+
+.artist-name {
+    margin-top: 5px;
+    color: black; /* Text color for names */
+    text-align: center; /* Center the name text */
+}
