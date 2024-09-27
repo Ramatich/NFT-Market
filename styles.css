@@ -95,8 +95,16 @@ spline-viewer {
 .card:hover {
     transform: translateY(-10px); /* Raises the card slightly on hover */
 }
-.second-header{
+.secondheader{
     font-size: 30px;
+    color: white;
+    background-color: black;
+    margin-left: 20px;
+}
+.backhead{
+    background-color: #000;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .card img {
@@ -298,10 +306,17 @@ header .column:nth-of-type(odd) {
     width: 100%; /* Full width of the profile */
     height: 150px; /* Fixed height for uniformity */
     border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    
 }
 
 .artist-name {
     margin-top: 5px;
     color: black; /* Text color for names */
     text-align: center; /* Center the name text */
+}
+.mainheaders{
+    background-color: #000;
+    color: white;
+    padding:"15px"
 }
