@@ -285,7 +285,8 @@ header .column:nth-of-type(odd) {
 .artists-section h2 {
     text-align: left; /* Align the header to the left */
     margin-bottom: 20px;
-    color: #000; /* Text color */
+    color: white; /* Text color */
+    padding: 20px;
 }
 
 .artists-container {
@@ -318,5 +319,6 @@ header .column:nth-of-type(odd) {
 .mainheaders{
     background-color: #000;
     color: white;
-    padding:"15px"
+    padding:"30px"
+    
 }
